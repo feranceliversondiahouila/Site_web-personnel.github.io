@@ -132,9 +132,59 @@
                 font-size: 2rem;
             }
         }
-    </style>
+
+        /* Bouton retour (style verre + position fixe) */
+    .btn-back {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      z-index: 3000;
+
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      padding: 10px 14px;
+      border-radius: 12px;
+      text-decoration: none;
+
+      color: #ffffff;                        /* texte/icône blanc */
+      background: rgba(0, 0, 0, 0.45);       /* verre sombre */
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      font-weight: 600;
+    }
+    .btn-back:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+      background: rgba(0, 0, 0, 0.55);
+    }
+    .btn-back i { font-size: 1rem; }
+    .btn-back span { font-size: 0.9rem; }
+        .accordion-header {
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            font-size: 1.3rem;  
+            font-weight: bold;
+            transition: all 0.3s ease;  
+        }
+
+</style>
 </head>
 <body>
+
+    <!-- Bouton Retour -->
+    <a class="btn-back" href="../index.html" id="back-link" aria-label="Retour à la page précédente">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Retour</span>
+    </a>
+
     <div class="container">
         <div class="glass-card">
             <h1>ADMINISTRER</h1>
